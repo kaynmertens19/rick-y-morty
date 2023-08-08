@@ -1,0 +1,54 @@
+.size{
+    width: 20%;
+    height: 95.9vh;
+    max-width: 600px;
+    max-height: 95.9vh;
+    overflow: auto;
+}
+.body{
+    background-color: black;
+}
+
+.flexeo{
+    display: flex;
+
+}
+
+.margin{
+    margin-top: 1em;
+}
+
+.mini{
+    width: 20px;
+}
+
+.btn{
+    margin-top: 1em;
+}
+
+.displayNone{
+    display: none;
+}
+
+.displayBlock{
+    display: block;
+}
+
+.card-title{
+    color: white !important;
+
+}
+
+.card-text{
+    color: white !important;
+    
+}
+
+.h1Episode{
+    color: white !important;
+}
+
+.h2Episode{
+    color: white !important;
+}
+
