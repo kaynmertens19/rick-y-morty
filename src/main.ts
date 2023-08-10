@@ -1,6 +1,5 @@
 import { Episode } from './types/episodes.js'
-import { getEpisodes } from './utils/API.js'
-import { getLocations } from './utils/API.js'
+import { getEpisodes, getLocations } from './utils/API.js'
 
 window.addEventListener('load', init)
 
