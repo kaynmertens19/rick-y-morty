@@ -7,8 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { getEpisodes } from './utils/API.js';
-import { getLocations } from './utils/API.js';
+import { getEpisodes, getLocations } from './utils/API.js';
 window.addEventListener('load', init);
 export function init() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -170,9 +169,5 @@ function imprimirEp(fetchEp, openModalImg, episode, closeModalImg, modalImg, bod
         ulEpisodesPj.appendChild(liEpisodesPj);
         liEpisodesPj.textContent = data.name;
         liEpisodesPj.id = "liEpisodes";
-        liEpisodesPj.addEventListener("click", () => {
-            showPj(episode);
-            modalImg.classList.remove('modalImg--show');
-        });
     });
 }

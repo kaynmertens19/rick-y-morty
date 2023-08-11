@@ -1,3 +1,5 @@
+
+// objects to create the interface to interact with hte information of the characters
 export enum CharacterStatus {
   Alive = 'Alive',
   Dead = 'Dead',

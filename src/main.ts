@@ -2,7 +2,7 @@ import { Episode } from './types/episodes.js'
 import { getEpisodes, getLocations } from './utils/API.js'
 
 window.addEventListener('load', init)
-
+// function to print the list of episodes when the page is loaded
 export async function init() {
   const cageEpisodes = document.querySelector('#ulEpisodes')
   const episodes = await getEpisodes()
@@ -37,7 +37,7 @@ export async function init() {
     })
   })
 }
-
+// function to load the information and fetch the characters that appears on one episode when you click on them.
 function showPj(episode: Episode) {
   const episodeChars = episode.characters
   const contenedorCard = document.querySelector('#contenedorCard')
@@ -67,7 +67,7 @@ function showPj(episode: Episode) {
     imprimirPersonajes(fetchChar, episode) //
   })
 }
-
+// function to print that characters in the screen
 async function imprimirPersonajes(fetchChar: Promise<Response>, episode: Episode) {
   const contenedorCard = document.querySelector('#contenedorCard')
   const result = await fetchChar
@@ -97,6 +97,7 @@ async function imprimirPersonajes(fetchChar: Promise<Response>, episode: Episode
     cardBody.appendChild(h5CardBody)
     cardBody.appendChild(pCardBody1)
 
+    // function to display the modal when you clickmin one character
     const openModalImg = document.getElementById(`${data.id}n`)
     const modalImg = document.querySelector('.modalImg')
     const closeModalImg = document.querySelector('.modal__closeImg')
@@ -125,6 +126,7 @@ async function imprimirPersonajes(fetchChar: Promise<Response>, episode: Episode
   }
 }
 
+// function to print the info on the modal
 function printModalInfo(
   location: any,
   openModalImg: any,
@@ -172,7 +174,7 @@ function printModalInfo(
 }
 
 
-
+// function to print the episodes in wich the characters appears
 async function imprimirEp(fetchEp: any, openModalImg: any, episode: Episode, closeModalImg : any,  modalImg: any,bodyMainInfo: any ) {
 
   const bodyEpisodeInfo = document.querySelector(".body_episodeInfo")
@@ -186,10 +188,4 @@ async function imprimirEp(fetchEp: any, openModalImg: any, episode: Episode, clo
   ulEpisodesPj.appendChild(liEpisodesPj);
   liEpisodesPj.textContent = data.name;
   liEpisodesPj.id = "liEpisodes"
-  liEpisodesPj.addEventListener("click", () =>{
-    showPj(episode);
-    modalImg!.classList.remove('modalImg--show')
-
-  
-  });
 }

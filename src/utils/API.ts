@@ -10,7 +10,7 @@ import { Location } from "../types/locations.js";
 import { init } from "../main.js";
 
 
-
+// Functions for loading the information from the API. Eisodes, characters and locations.
 export async function getEpisodes(): Promise<Episode[]> {
   const response = await fetch(urlEpisodes + `?page=${page}`)
   console.log(urlEpisodes)
@@ -31,6 +31,7 @@ export async function getLocations(): Promise<Location[]> {
 }
 
 
+// functions to change the page of episodes loaded on the side navigation
 const nextButton = document.querySelector("#load-more");
 const previusButton = document.querySelector("#load-minus")
 nextButton?.addEventListener("click", next)
@@ -57,7 +58,7 @@ if (page === 1){
 }
 }
 
-
+// function to charge the next episodes
 function next(){
   page++
   console.log(page)
@@ -69,7 +70,7 @@ function next(){
   init()
 esconderBotones()
 }
-
+// function to charge the previus episodes
 function previus(){
   page--
   console.log(page)

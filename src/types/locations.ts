@@ -1,3 +1,5 @@
+// objects to create the interface to interact with hte information of the locations
+
 export enum LocationType {
   Planet = 'Planet',
   Dimension = 'Dimension',

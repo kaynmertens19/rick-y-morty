@@ -1,41 +1,101 @@
 
-Dia 1 Viernes- 
--Planteo de la página de rick y morty y comienzo de el html usando boostrap.
+#Objetives#
+ºObtain information from third-party API's.
+ºImprove your knowledge of HTML, CSS and Javascript.
+ºIntroduce typescript in your code.
+ºLearn more about how to integrate APIS and its interaction with the client.
+ºImprove your skills in obtaining asynchronous information by using AJAX.
+ºStructure a WEB pro	ject in a clear and orderly manner.
+You must create a website capable of displaying all the information in the series (episodes, characters, locations) so that you can navigate through the episodes and characters.
+
+# Requirements#
+You can use a tool like ThunderClient, RapidAPI or Postman for testing your endpoints and requests.
+You must use Fetch to make requests
+All the code, including comments, needs to be written in English
+Delete unused files, comments or code in the project. 
+You can use only one HTML file.
+You can create your own CSS or you can use Bootstrap or any CSS framework
+You must use Typescript in all scripts, keep ts and js files in the repo
+You must use Git, Github and features branches
+You must follow the Git commit best practices in the following guidelines:
+https://chris.beams.io/posts/git-commit/  
+You must use semantic HTML5 elements for all the contents of the application
+
+
+!!!!!!!!!!!!!!!!!IMPORTANT!!!!!!!!!!!!!!!!!!!!!
+We are not using any framework or tool like webpack(you will later on the master), we are serving our .js files to the browsers 
+so we have to edit our tsconfig.json in order to write the correct vanilla js sintaxis. 
+Go to tsconfig.json and set both target and module options to "es6":
+
+
+"target": "es6",
+"module": "es6"
+
+
+Also remember to set the type attribute in your script element <script type="module" src="myScript.js"> 
+and use the .js extension in the imports (import { myFunc } from "./utils/funcs.js";) so you can use export and import.
+
+
+Browsers don't like requests to have different origins so if you try to load script modules locally and open your index.html 
+directly in your browser you'll get a CORS error. To avoid CORS error we have to use a local server like the one 
+Live Server so we use the localhost server.
+
+#Resources#
+TypeScript: https://www.typescriptlang.org/docs/handbook/
+ThunderClient: https://www.thunderclient.com/
+RapidAPI: https://rapidapi.com/guides/replace-api-clients-with-vscode-using-the-rapidapi-extension
+Postman: https://www.postman.com/
+
+#Wireframea#
+
+General view: assets/character.png
+Character view: assets/general_view.png
+Location view:  assets/location.png
+
+Day 1 Friday- 
+-Drafting the rick and morty page and starting the html using boostrap.
  
- Dia 2 Sabado- 
- -Termino todo el Html con boostrap y elimino divs y texto innecesario.
- -Cambio trozos del css para que se adapte a mi estilo de página.
+ Day 2 Saturday- -Finish all the html with boostrap. 
+ -I finish all the html with boostrap and remove divs and unnecessary text.
+ -I change bits of the css to fit my page style.
  
- Dia 3 Domingo-
- -Descanso
+ Day 3 Sunday-
+ -Break
 
- Dia 4 Lunes-
- - Comienzo de la API: 
-        :-Declaro las url y procedo a hacer un fetch de cada una desde la API.
-        :- Creo una seccion de tipos y dentro de esta separo entre episodios, characters y locations.
-        :- dentro de cada uno defino la interfaz desde la que sacará los datos de la Api.
-        :- Creo el main typescript desde el que se subiran todas las funciones al archivo main de js.
-        :- creo la funcion init desde la cual empiezo a imprimir los episodios en la lista
-    !:-No me sale hoy
+ Day 4 Monday
+ - Start the API: 
+        :-Declare the urls and proceed to fetch each one from the API.
+        :- I create a section of types and inside this I separate between episodes, characters and locations.
+        :- inside each one I define the interface from which it will get the data from the Api.
+        :- I create the main typescript from which all the functions will be uploaded to the js main file.
+        :- I create the init function from which I start printing the episodes in the list.
+    !:-I don't get it today
 
-Dia 5 Martes-
- - Seguimos con la main:
-    :-Al fin logro imprimir todos los episodios y separarlos con el next page.
-    :- Consigo los personajes que aparecen en un episodios en forma de url y los paso a array.
-    :- Con un foreach los separo y hago un fetch de cada uno.
-    :- De esa forma los imprimo en pantalla con sus datos e imagenes.
+Day 5 Tuesday-
+ - We continue with the main:
+    :-I finally manage to print all the episodes and separate them with the next page.
+    :- I get the characters that appear in an episode in url form and pass them to array.
+    :- With a foreach I separate them and make a fetch of each one.
+    :- That way I print them on screen with their data and images.
 
-Dia 6 Miercoles-
- -Seguimos con el modal:
-    :-Empiezo a hacer el modal con boostrap y tengo problemas para abrirlo.
-    :- Despues de varios intentos lo elimino y hago uno desde 0.
-    :- Con este modal tengo menos problemas asi que lo separo en piezas y empiezo a imprimirle cosas dentro.
-    :- tengo problemas porque la main ts tiene una sola funcion con muchas funciones dentro asi que empiezo a separarlas de la principal.
-    :- los for each me imprimen un mismo objeto por cada vez que pasan asi que simplemente enlazo el resultado de la funcion principal del fetch a otras funciones externas y los manipulo.
+Day 6 Wednesday-
+ -We continue with the modal:
+    :-I start to make the modal with boostrap and I have problems to open it.
+    :- After several attempts I delete it and make one from 0.
+   :- With this modal I have less problems so I separate it into pieces and start printing things inside.
+    :- I have problems because the main ts has only one function with many functions inside so I start separating them from the main one.
+    :- the for each ones print me the same object each time they pass so I just link the result of the main fetch function to other external functions and manipulate them.
 
- Dia 7 jueves-
- -Empiezo el css y la decoracion:
-    :- uso una imagen principal para cuando no haya ningun episodio cargado.
-    :- Le doy clases a los objetos creados desde js para posicionarlos y decorarlos.
-    :- empiezo la version movil.+
-    :- ironicamente tocando dos cosas simplemente se coloca solo y decido continuar posicionando objetos dentro del modal version movil.
+ Day 7 Thursday-
+ -I start the css and decoration:
+    :- I use a main image for when there is no episode loaded.
+    :- I give classes to the objects created from js to position and decorate them.
+    :- I start the mobile version.
+    :- ironically by touching two things it simply places itself and I decide to continue positioning objects inside the mobile version modal.
+
+
+    #Learned#
+    It's a really tough and complicated project, at least from my point of view. 
+    Ignoring the difficulty of the project it was the perfect moment to show more or less what you can do with what you have learned. 
+    I have achieved a project that I feel proud of, although I have not done the extra part of the locations due to personal issues, 
+    I think my project is pretty well done.
